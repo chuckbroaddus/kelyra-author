@@ -1,0 +1,11 @@
+{
+  "updatedAt": "2026-08-27T16:50:46-05:00",
+  "version": 1,
+  "items": [
+    {"id":"SPEC","pri":"P1","lane":"Docs","status":"APPLIED","summary":"Package spec frozen from live FoM 1.1","prompt":"docs/package-spec.md and docs/fom-ch01-s11.manifest.json are the v1 fixture. Do not rewrite FoM."},
+    {"id":"HOOK","pri":"P0","lane":"Class app","status":"HOLD","summary":"publish_lesson_pack lives in Kelyra, not this repo","prompt":"Class-app Edge hook. Tracked on Kelyra Desk. Author designs against docs/publish-lesson-pack.md."},
+    {"id":"LOOP","pri":"P1","lane":"Tooling","status":"APPLIED","summary":"author-qa-loop + Author Loop board standing","prompt":"Grok workflow author-qa-loop; board ~/projects/kelyra-author-loop-board."},
+    {"id":"RT","pri":"P0","lane":"Pack","status":"HOLD","summary":"1.1 round-trip emit (fom-ch01-s11-test)","prompt":"Studio emits a pack matching the 1.1 fixture that Open/Submit/skill-gap on the class app. Hold until publish hook and first studio scaffold."},
+    {"id":"STAFF","pri":"P2","lane":"Product","status":"OPEN","summary":"Kinds + metrics proposal and staff ask","prompt":"Author agent owns this; not a grok coding ticket yet."}
+  ]
+}
