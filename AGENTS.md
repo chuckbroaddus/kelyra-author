@@ -8,6 +8,7 @@ Docs:
 - `docs/STYLE-BRIEF.md`
 - `docs/publish-lesson-pack.md` (class-app hook; implementation is **not** in this repo)
 - `docs/fom-ch01-s11.manifest.json` (v1 fixture; do not rewrite FoM)
+- `docs/kinds-metrics.md` (kinds plan + syllabus rule; Author does not own gradebook)
 
 The class app lives at `~/projects/kelyra`. This repo must never edit it.
 
