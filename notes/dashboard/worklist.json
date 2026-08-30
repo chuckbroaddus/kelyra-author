@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T16:58:00-05:00",
+  "updatedAt": "2026-08-27T20:09:00-05:00",
   "version": 1,
   "items": [
     {
@@ -25,6 +25,14 @@
       "status": "APPLIED",
       "summary": "author-qa-loop + Author Loop board standing",
       "prompt": "Grok workflow author-qa-loop; board ~/projects/kelyra-author-loop-board."
+    },
+    {
+      "id": "PACKER",
+      "pri": "P0",
+      "lane": "Pack",
+      "status": "APPLIED",
+      "summary": "Packer CLI emits FoM 1.1 gold into gitignored scratch",
+      "prompt": "scripts/pack-lesson.mjs; tests in test/"
     },
     {
       "id": "RT",

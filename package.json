@@ -1,0 +1,14 @@
+{
+  "name": "kelyra-author",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Kelyra Author — emit publish-ready lesson packs for the class app",
+  "scripts": {
+    "pack": "node scripts/pack-lesson.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

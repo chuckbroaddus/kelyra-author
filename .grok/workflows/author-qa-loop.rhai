@@ -286,6 +286,7 @@ fn impl_initial_prompt(request_json) {
     let p = "";
     p += "You are the Kelyra Author implementation agent (persona author-implementer).\n";
     p += "Do not spawn subagents. Do not call spawn_subagent. Implement this request yourself.\n";
+    p += "Never call ask_user_question. Never probe whether a tool exists. Do not send dummy Continue / placeholder questions. If you cannot inspect something, record that as evidence and still return the JSON report. Do not wait for a human.\n";
     p += "You have write access to the CURRENT working tree. isolation is off.\n";
     p += "This repo is ~/projects/kelyra-author. NEVER edit ~/projects/kelyra (class app).\n";
     p += "Preserve existing uncommitted work. Do not git reset, git checkout, git restore, ";
@@ -307,6 +308,7 @@ fn impl_initial_prompt(request_json) {
 fn impl_fix_prompt(kind, request_json, findings_json) {
     let p = "";
     p += "Resume Kelyra Author implementation. Do not spawn subagents.\n";
+    p += "Never call ask_user_question. Never probe whether a tool exists. Do not send dummy Continue / placeholder questions. If you cannot inspect something, record that as evidence and still return the JSON report. Do not wait for a human.\n";
     p += "NEVER edit ~/projects/kelyra. Preserve unrelated working-tree changes. No git reset/checkout/restore/clean/stash/commit/push.\n";
     p += "Fix only the blocking P0/P1 findings below. Smallest correct fix. Add a regression test when appropriate.\n";
     p += "Inspect the actual code for each finding. Do not patch a symptom if the root cause is nearby.\n";
@@ -325,6 +327,7 @@ fn qa_prompt(request_json, impl_json) {
     let p = "";
     p += "You are the Kelyra Author QA reviewer (persona author-qa). You are READ-ONLY.\n";
     p += "Do not modify files. Do not spawn subagents. Do not call spawn_subagent.\n";
+    p += "Never call ask_user_question. Never probe whether a tool exists. Do not send dummy Continue / placeholder questions. If you cannot inspect something, record that as evidence and still return the JSON report. Do not wait for a human.\n";
     p += "Independently inspect the actual working tree. Do not trust the implementer summary as evidence.\n";
     p += "You have no shell. Reconstruct the change by reading files with read_file and grep.\n";
     p += "Read AGENTS.md and docs/package-spec.md. STYLE-BRIEF is the quality bar for pack emit.\n";
@@ -355,6 +358,7 @@ fn security_prompt(request_json, impl_json, prior_json) {
     let p = "";
     p += "You are the Author security QA agent. Use author-qa invariants. You are READ-ONLY.\n";
     p += "Do not modify files. Do not spawn subagents.\n";
+    p += "Never call ask_user_question. Never probe whether a tool exists. Do not send dummy Continue / placeholder questions. If you cannot inspect something, record that as evidence and still return the JSON report. Do not wait for a human.\n";
     p += "Inspect the actual working tree with read_file and grep. Do not trust the implementer summary.\n";
     p += "Audit only THIS request's changes. Ignore unrelated pre-existing dirty-tree work.\n";
     p += "Focus: no student PII in zip/package files; no secrets in emitted HTML; ";
@@ -379,6 +383,7 @@ fn verify_prompt(request_json, impl_json) {
     let p = "";
     p += "Run deterministic verification for this Author studio change. Do not edit files.\n";
     p += "Do not spawn subagents. Do not git reset/checkout/restore/clean/stash/commit/push.\n";
+    p += "Never call ask_user_question. Never probe whether a tool exists. Do not send dummy Continue / placeholder questions. If you cannot inspect something, record that as evidence and still return the JSON report. Do not wait for a human.\n";
     p += "Do not start long-lived servers (no Expo, no static file server left running).\n";
     p += "Read package.json if it exists. If none, or no typecheck/tests/lint scripts: skip, set ok=true, list skipped reasons.\n";
     p += "1. If a lint script exists and is cheap, run it. This repo often has no lint script — skip if absent.\n";

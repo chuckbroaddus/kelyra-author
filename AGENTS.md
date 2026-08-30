@@ -9,6 +9,8 @@ Docs:
 - `docs/publish-lesson-pack.md` (class-app hook; implementation is **not** in this repo)
 - `docs/fom-ch01-s11.manifest.json` (v1 fixture; do not rewrite FoM)
 - `docs/kinds-metrics.md` (kinds plan + syllabus rule; Author does not own gradebook)
+- `docs/product-design.md` (studio product; draft for CoS)
+- `docs/author-kelyra-interface.md` (Author↔class-app transfer; draft for CoS)
 
 The class app lives at `~/projects/kelyra`. This repo must never edit it.
 
@@ -39,5 +41,7 @@ Do **not** use author-qa-loop for analysis, planning, Q&A, docs-only edits, or g
 No student PII in packages. Bridge is `kelyra.identity` + `kelyra.lesson` as in the package spec.
 
 `docs/STYLE-BRIEF.md` is the quality bar. Generated-looking content fails.
+
+Loop children (implementer, QA, verify, security) must never call `ask_user_question`, including dummy Continue / tool-existence probes. There is no UI to click; it hangs the loop. If something cannot be inspected, report it and finish.
 
 Do not git commit or push unless the user explicitly asks. (The initial scaffold commit is the one-time exception.)

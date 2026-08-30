@@ -126,7 +126,7 @@ Per-call cap = that size + 25%:
 
 - **12,304,812 bytes** (11.73 MiB)
 
-413 if the request exceeds this. No service-role key in the Author client.
+413 if the request exceeds this. **This is a safety ceiling, not a size target.** New Author emit should come in well under it: WebP (or smaller) stills, compressed spoken audio, no backup originals (`png-original` / `ava-original` / `eve-staging` never ship). Optimize for web disbursement (storage + network) without looking cheap — STYLE-BRIEF quality still fails muddy or generated-looking art. Live FoM v4 is fat because of textbook stills; do not treat that folder as the budget. No service-role key in the Author client.
 
 ## What this is not
 
@@ -138,6 +138,11 @@ Per-call cap = that size + 25%:
 - Not quiz/test kinds on this RPC (`kind` stays `lesson`).
 - Not marketplace.
 - Not Ask `publish_lesson`.
+
+
+## Living contract
+
+Metrics, item types, and pack scope are **living**. They expand via revisions of this file, package-spec, and author-kelyra-interface (`kelyra.pack/1` → `/2`). v1 must still speak the live FoM bridge. The class app ignores unknown extras. Author must not require new metrics Kelyra cannot ingest until that revision exists.
 
 ## Proof (after code exists)
 

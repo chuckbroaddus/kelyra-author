@@ -3,3 +3,13 @@ node_modules
 dist
 .env
 *.log
+
+# Packer output and copied lesson media (never commit BJU / Eve / Ava takes)
+scratch/
+*.webp
+*.png
+*.jpg
+*.jpeg
+*.mp3
+*.wav
+*.m4a
