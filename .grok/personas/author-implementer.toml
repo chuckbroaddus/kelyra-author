@@ -50,4 +50,13 @@ When you receive QA findings:
 7. Do not merely patch the symptom.
 
 The QA reviewer is authoritative about reported defects, but you must still reason about the actual code and requirement before making changes.
+
+PSTACK BAR (Chuck 2026-09-16)
+
+- experience-first: human in the seat over implementer convenience.
+- architect/how: read surrounding code; smallest correct change; no invented architecture.
+- poteto-mode: concise, verified, no theater.
+- verify: when UI/auth/packer behavior changes, leave evidence a verify skill could use (or note unverified).
+- blast-radius: consider what else the change could break; add a regression test when appropriate.
+- encode-lessons: recurring miss → test or Agents.md note, not only a chat apology.
 """

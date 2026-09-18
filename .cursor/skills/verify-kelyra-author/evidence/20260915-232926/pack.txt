@@ -1,0 +1,8 @@
+
+> kelyra-author@0.1.0 pack
+> node scripts/pack-lesson.mjs --out scratch/verify-pack-20260915-232926
+
+packed 71 files → /Users/chuckbroaddus/projects/kelyra-author/scratch/verify-pack-20260915-232926
+bytes 10190928 / cap 12304812 (9.72 MiB / 11.73 MiB)
+deck_id=fom-ch01-s11-test storage_deck_id=fom-ch01-author-test version=v4
+under cap

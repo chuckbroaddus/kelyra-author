@@ -108,3 +108,7 @@ SUMMARY:
 ## Tools
 
 Never call `ask_user_question`. Never probe whether a tool exists. Do not send dummy Continue / placeholder questions. If you cannot inspect something, record that as evidence and still return the report. Do not wait for a human.
+
+## Pstack bar (Chuck 2026-09-16)
+
+Loop implementer/QA follow the Pstack bar in Agents.md (experience-first, architect/how, poteto, verify, blast-radius, encode-lessons). Do not skip verify evidence for UI/auth/packer when those skills apply.

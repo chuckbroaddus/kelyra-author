@@ -1,0 +1,24 @@
+
+> kelyra-author@0.1.0 test
+> node --test test/*.test.mjs
+
+▶ pack-lesson
+  ✔ refuses missing index.html (1.860417ms)
+  ✔ refuses missing manifest (0.750292ms)
+  ✔ skips backup dirs png-original, ava-original, eve-staging (3.233667ms)
+  ✔ stamps round-trip test ids by default (2.265167ms)
+  ✔ stampManifest keeps stems and applies test ids (0.646417ms)
+  ✔ fails non-zero path when over hard byte cap (1.607333ms)
+  ✔ refuses --out outside scratch/ without deleting (0.875625ms)
+  ✔ refuses --out under class-app tree without deleting (1.347416ms)
+  ✔ refuses --out through symlink under outRoot without deleting (1.3495ms)
+  ✔ gitignore covers scratch/ (0.508042ms)
+✔ pack-lesson (15.216416ms)
+ℹ tests 10
+ℹ suites 1
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 73.573291

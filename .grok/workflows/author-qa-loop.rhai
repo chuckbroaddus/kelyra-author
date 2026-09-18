@@ -6,7 +6,7 @@ let meta = #{
         #{ title: "Implement", detail: "author-implementer writes the change in the current working tree" },
         #{ title: "QA", detail: "read-only author-qa inspects the working tree independently" },
         #{ title: "Repair", detail: "resume the original implementer for P0/P1 findings" },
-        #{ title: "Verify", detail: "run typecheck and inexpensive tests when they exist" },
+        #{ title: "Verify", detail: "typecheck/tests plus verify-kelyra-author nudge when packer touched (or mark unverified)" },
         #{ title: "Security", detail: "read-only security review only if sensitive boundaries changed" },
     ],
 };
@@ -393,6 +393,8 @@ fn verify_prompt(request_json, impl_json) {
     p += "Do not npm install. Do not hit production. Quote command output in ran[].output (trim to essentials).\n";
     p += "Set ok=true if every command you ran passed, OR if you skipped because there were no applicable scripts. Put failures in blocking as P1 with evidence.\n";
     p += "List skipped commands in skipped with a one-line reason.\n";
+    p += "PACKER VERIFY NUDGE (Chuck 2026-09-16): If the request or changed_paths touch packer emit, CLI pack, scratch packs, or packer tests, also apply project skill verify-kelyra-author (.cursor/skills/verify-kelyra-author): npm test and/or pack under scratch/ when practical. ";
+    p += "Do not start long-lived servers. If you cannot run verify-kelyra-author, add skipped reason 'verify-kelyra-author unverified: <blocker>' — do not set ok=false for that skip alone; the parent must treat packer as unverified until evidence exists.\n";
     p += "ORIGINAL REQUEST (JSON):\n";
     p += request_json;
     p += "\nIMPLEMENTATION RESULT (JSON):\n";

@@ -87,3 +87,13 @@ Do not modify files.
 TOOLS
 
 Never call ask_user_question. Never probe whether a tool exists. Do not send dummy Continue / placeholder questions. If you cannot inspect something, record that as evidence and still return the JSON report. Do not wait for a human.
+
+
+PSTACK BAR (Chuck 2026-09-16)
+
+- experience-first: judge the human path (teacher/parent/kid), not only code elegance.
+- verify: prefer verify-kelyra / verify-kelyra-author evidence when the change touches those surfaces; still inspect the actual diff.
+- blast-radius: look for collateral breakage outside the happy path.
+- encode-lessons: if the same class of defect recurs, note it so the next pass starts there (comment on card / finding text).
+- poteto-mode: short, evidenced findings; P0/P1 only for real failure paths.
+

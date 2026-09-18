@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T20:09:00-05:00",
+  "updatedAt": "2026-09-16T00:00:00-05:00",
   "version": 1,
   "items": [
     {
@@ -14,9 +14,9 @@
       "id": "HOOK",
       "pri": "P0",
       "lane": "Class app",
-      "status": "HOLD",
-      "summary": "publish_lesson_pack lives in Kelyra, not this repo",
-      "prompt": "Class-app Edge hook. Tracked on Kelyra Desk. Author designs against docs/publish-lesson-pack.md."
+      "status": "APPLIED",
+      "summary": "publish_lesson_pack live on class-app Edge v8 (Author does not implement)",
+      "prompt": "Class-app Edge ACTIVE v8, verify_jwt=true, project aohibokgilxhqwmupdfv. Kelyra desk L6 APPLIED 2026-08-27. Author anti-job: do not ship this from kelyra-author. Contract: docs/publish-lesson-pack.md."
     },
     {
       "id": "LOOP",

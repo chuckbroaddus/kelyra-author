@@ -45,3 +45,7 @@ No student PII in packages. Bridge is `kelyra.identity` + `kelyra.lesson` as in 
 Loop children (implementer, QA, verify, security) must never call `ask_user_question`, including dummy Continue / tool-existence probes. There is no UI to click; it hangs the loop. If something cannot be inspected, report it and finish.
 
 Do not git commit or push unless the user explicitly asks. (The initial scaffold commit is the one-time exception.)
+
+## Pstack bar (Chuck 2026-09-16)
+
+Default coding kit (parent + loop children): experience-first, architect/how, poteto-mode, verify, blast-radius, encode-lessons. Rare: swarm/arena. Full bar: Grok Bot skill `kelyra-pstack-bar` / Hermes SOUL pointer — do not paste the long form here.
